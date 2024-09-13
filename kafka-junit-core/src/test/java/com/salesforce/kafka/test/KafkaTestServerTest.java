@@ -212,7 +212,7 @@ class KafkaTestServerTest {
         // Define our override property
         final Properties overrideProperties = getDefaultBrokerOverrideProperties();
         overrideProperties.put("broker.id", String.valueOf(expectedBrokerId));
-
+        
         // Create our test server instance passing override properties.
         try (final KafkaTestServer kafkaTestServer = new KafkaTestServer(overrideProperties)) {
             // Lets try to be sneaky and change our local property after calling the constructor.
@@ -319,7 +319,6 @@ class KafkaTestServerTest {
             // Start instance back up
             kafkaTestServer.start();
 
-            Thread.sleep(2000);
             // Attempt to consume messages after restarting service.
             records = kafkaTestUtils.consumeAllRecordsFromTopic(topicName);
             Assertions.assertNotNull(records);
