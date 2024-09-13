@@ -78,8 +78,8 @@
     <!-- defined properties -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.release>21</maven.compiler.release>
+        <java.version>21</java.version>
 
         <!-- Define which kafka version -->
         <kafkaVersion>3.4.0</kafkaVersion>
@@ -186,8 +186,7 @@
                 <version>3.8.0</version>
                 <configuration>
                     <!-- source and target is java 1.8 -->
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <release>21</release>
                     <testExcludes>
                         <!-- by default exclude kafka 0.11.0.x specific tests -->
                         <testExclude>**/kafka_${tests.excluded}/*.java</testExclude>
@@ -291,7 +290,7 @@
                 <version>${javadoc.version}</version>
                 <configuration>
                     <show>public</show>
-                    <source>8</source>
+                    <source>21</source>
                 </configuration>
             </plugin>
 
