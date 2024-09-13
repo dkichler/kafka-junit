@@ -70,16 +70,15 @@
         <url>https://github.com/salesforce/kafka-junit/tree/master</url>
     </scm>
 
-    <!-- Require Maven 3.3.9 -->
+    <!-- Require Maven 3.9.9 -->
     <prerequisites>
-        <maven>3.3.9</maven>
+        <maven>3.9.9</maven>
     </prerequisites>
 
     <!-- defined properties -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>21</maven.compiler.release>
-        <java.version>21</java.version>
 
         <!-- Define which kafka version -->
         <kafkaVersion>3.8.0</kafkaVersion>
@@ -102,8 +101,8 @@
         <checkstyle.ruleset>script/checkstyle-ruleset.xml</checkstyle.ruleset>
 
         <!-- plugin versions -->
-        <checkstyle.version>3.1.0</checkstyle.version>
-        <javadoc.version>3.3.0</javadoc.version>
+        <checkstyle.version>3.5.0</checkstyle.version>
+        <javadoc.version>3.10.0</javadoc.version>
         <surefire.version>2.22.2</surefire.version>
 
         <!-- excluded tests based on specific kafka versions -->
@@ -183,9 +182,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>3.13.0</version>
                 <configuration>
-                    <!-- source and target is java 1.8 -->
+                    <!-- source and target is java 21 -->
                     <release>21</release>
                     <testExcludes>
                         <!-- by default exclude kafka 0.11.0.x specific tests -->
@@ -273,7 +272,7 @@
                         <dependency>
                             <groupId>com.puppycrawl.tools</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>8.29</version>
+                            <version>10.18.1</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -336,9 +335,6 @@
                                 <goals>
                                     <goal>jar</goal>
                                 </goals>
-				<configuration>
-				    <source>8</source>
-				</configuration>
                             </execution>
                         </executions>
                     </plugin>
