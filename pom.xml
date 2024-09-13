@@ -86,14 +86,14 @@
         <kafkaScalaVersion>kafka_2.12</kafkaScalaVersion>
 
         <!-- Define which Curator Test version -->
-        <curatorTestVersion>2.12.0</curatorTestVersion>
+        <curatorTestVersion>5.7.0</curatorTestVersion>
 
         <!-- For logging in tests -->
         <slf4jVersion>1.7.36</slf4jVersion>
 
         <!-- JUnit versions -->
         <junit4.version>4.13.2</junit4.version>
-        <junit5.version>5.9.2</junit5.version>
+        <junit5.version>5.11.0</junit5.version>
         <junit5PlatformProvider.version>1.3.2</junit5PlatformProvider.version>
 
         <!-- test toggling -->
